@@ -46,7 +46,7 @@ jobs:
 
     - name: Create Snapshot
       run: |
-        gh release create ${{ env.GIT_TAG }} --prerelease --notes-file "Snapshot.md" --title "Rotorflight Snapshot ${{ env.GIT_VER }}" obj/*.hex
+        gh release create ${{ env.GIT_TAG }} --prerelease --generate-notes --title "Rotorflight Snapshot ${{ env.GIT_VER }}" obj/*.hex
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
